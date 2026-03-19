@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAMAN | नमन • A Timeless Indian Retreat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@400;500;600&amp;family=Noto+Serif+Devanagari:wght@400;700&amp;display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@400;500;600&amp;family=Noto+Serif+Devanagari:wght@400;700&amp;display=swap');
+        
+        :root {
+            --gold: #d4af77;
+        }
+        
+        .tail-container {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hindi-font {
+            font-family: 'Noto Serif Devanagari', serif;
+        }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://picsum.photos/id/1015/2000/1200');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .section-bg {
+            background-image: url('https://picsum.photos/id/1016/2000/800');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #d4af77;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .room-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .room-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgb(212 175 119 / 0.25);
+        }
+        
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            background: linear-gradient(to right, #d4af77, #b8860b);
+            z-index: 50;
+        }
+    </style>
+</head>
+<body class="tail-container text-stone-800 bg-stone-50 overflow-x-hidden">
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="scroll-progress w-0"></div>
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-100">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-x-3">
+                <div class="w-9 h-9 bg-amber-800 rounded-full flex items-center justify-center text-white text-2xl font-bold heading-font">N</div>
+                <div>
+                    <h1 class="text-3xl tracking-tighter heading-font text-stone-900">NAMAN</h1>
+                    <p class="text-[10px] tracking-[3px] text-amber-800 hindi-font -mt-1">नमन</p>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+                <a href="#home" class="nav-link text-stone-700 hover:text-amber-800">HOME</a>
+                <a href="#rooms" class="nav-link text-stone-700 hover:text-amber-800">ROOMS</a>
+                <a href="#dining" class="nav-link text-stone-700 hover:text-amber-800">DINING</a>
+                <a href="#experiences" class="nav-link text-stone-700 hover:text-amber-800">EXPERIENCES</a>
+                <a href="#gallery" class="nav-link text-stone-700 hover:text-amber-800">GALLERY</a>
+                <a href="#about" class="nav-link text-stone-700 hover:text-amber-800">ABOUT</a>
+                <a href="#contact" class="nav-link text-stone-700 hover:text-amber-800">CONTACT</a>
+            </div>
+
+            <!-- Book Button -->
+            <a href="#booking" 
+               class="px-8 py-3 bg-amber-800 hover:bg-amber-900 text-white text-sm font-medium tracking-wider transition-all rounded-full">
+                BOOK NOW
+            </a>
+
+            <!-- Mobile Hamburger -->
+            <button id="mobile-menu-btn"
+                    class="md:hidden w-10 h-10 flex items-center justify-center text-2xl">
+                ☰
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-8 flex flex-col gap-y-6 text-lg font-medium">
+                <a href="#home" class="mobile-link">HOME</a>
+                <a href="#rooms" class="mobile-link">ROOMS &amp; SUITES</a>
+                <a href="#dining" class="mobile-link">DINING</a>
+                <a href="#experiences" class="mobile-link">EXPERIENCES</a>
+                <a href="#gallery" class="mobile-link">GALLERY</a>
+                <a href="#about" class="mobile-link">OUR STORY</a>
+                <a href="#contact" class="mobile-link">CONTACT</a>
+                <a href="#booking" class="mt-6 px-8 py-4 bg-amber-800 text-white text-center rounded-full">BOOK YOUR STAY</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center relative">
+        <div class="text-center text-white max-w-4xl px-6 z-10">
+            <p class="text-amber-300 tracking-[6px] text-sm font-medium mb-2 hindi-font">रajasthan • INDIA</p>
+            <h1 class="text-[92px] md:text-[120px] leading-none heading-font tracking-tighter mb-2">NAMAN</h1>
+            <h2 class="text-4xl hindi-font tracking-wider text-amber-200">नमन</h2>
+            <p class="mt-8 max-w-md mx-auto text-xl text-stone-100 font-light">
+                Where ancient grace meets modern serenity
+            </p>
+            <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#rooms" 
+                   class="px-10 py-5 bg-white text-stone-900 hover:bg-amber-100 transition-all text-sm font-semibold tracking-wider">
+                    EXPLORE ROOMS
+                </a>
+                <a href="#booking" 
+                   class="px-10 py-5 border border-white hover:bg-white/10 transition-all text-sm font-semibold tracking-wider">
+                    RESERVE YOUR STAY
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-y-2 text-white/70 text-xs tracking-widest">
+            <div class="w-px h-12 bg-gradient-to-b from-transparent via-white/60 to-transparent"></div>
+            SCROLL
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-amber-800 text-sm tracking-widest font-medium">OUR STORY</span>
+                <h2 class="heading-font text-5xl leading-none mt-3 mb-8">
+                    नमन — A sanctuary of<br>timeless Indian elegance
+                </h2>
+                <div class="prose text-stone-600 text-lg">
+                    <p class="mb-6">
+                        Nestled in the heart of Rajasthan, NAMAN is more than a hotel — it is a living tribute to India’s rich heritage.
+                        Every detail, from the hand-carved sandstone walls to the fragrant marigold garlands, reflects centuries of tradition
+                        while embracing contemporary luxury.
+                    </p>
+                    <p>
+                        Whether you seek solitude by the infinity pool overlooking the Aravalli hills or wish to experience a private yoga 
+                        session at sunrise, NAMAN invites you to slow down and reconnect with yourself.
+                    </p>
+                </div>
+                <div class="mt-10 flex items-center gap-x-8">
+                    <div class="text-center">
+                        <div class="text-4xl font-semibold text-amber-800">42</div>
+                        <div class="text-xs tracking-widest text-stone-500">LUXURY ROOMS</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-semibold text-amber-800">3</div>
+                        <div class="text-xs tracking-widest text-stone-500">SIGNATURE RESTAURANTS</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-semibold text-amber-800">18</div>
+                        <div class="text-xs tracking-widest text-stone-500">ACRES OF TRANQUILITY</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <img src="https://picsum.photos/id/201/800/900" 
+                     alt="NAMAN courtyard" 
+                     class="w-full rounded-2xl shadow-2xl">
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-[260px]">
+                    <p class="hindi-font text-2xl italic text-stone-700">
+                        “यहाँ समय रुक जाता है”<br>
+                        <span class="block text-xs text-amber-800 mt-3 not-italic font-medium">— Here time stands still</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROOMS -->
+    <section id="rooms" class="py-24 bg-stone-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="px-5 py-2 bg-amber-100 text-amber-800 text-xs font-medium rounded-full">ROOMS &amp; SUITES</span>
+                <h2 class="heading-font text-5xl mt-4">Choose your sanctuary</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Room 1 -->
+                <div class="room-card bg-white rounded-3xl overflow-hidden">
+                    <img src="https://picsum.photos/id/1018/600/400" 
+                         alt="Deluxe Room" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="text-2xl heading-font">Deluxe Room</h3>
+                            <span class="text-amber-800 font-medium">₹28,000</span>
+                        </div>
+                        <p class="hindi-font text-sm text-stone-500">विलासिता कक्ष</p>
+                        <p class="mt-4 text-stone-600 text-sm line-clamp-3">
+                            Spacious 45 sqm room with private balcony overlooking the garden, king bed, and marble bathroom.
+                        </p>
+                        <a href="#booking" 
+                           class="mt-8 block text-center py-4 border border-amber-800 hover:bg-amber-800 hover:text-white transition-all text-sm font-medium">
+                            BOOK THIS ROOM
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Room 2 -->
+                <div class="room-card bg-white rounded-3xl overflow-hidden">
+                    <img src="https://picsum.photos/id/102/600/400" 
+                         alt="Signature Suite" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="text-2xl heading-font">Signature Suite</h3>
+                            <span class="text-amber-800 font-medium">₹48,000</span>
+                        </div>
+                        <p class="hindi-font text-sm text-stone-500">हस्ताक्षर सूट</p>
+                        <p class="mt-4 text-stone-600 text-sm line-clamp-3">
+                            85 sqm of pure indulgence with separate living area, private terrace, and plunge pool.
+                        </p>
+                        <a href="#booking" 
+                           class="mt-8 block text-center py-4 border border-amber-800 hover:bg-amber-800 hover:text-white transition-all text-sm font-medium">
+                            BOOK THIS ROOM
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Room 3 -->
+                <div class="room-card bg-white rounded-3xl overflow-hidden">
+                    <img src="https://picsum.photos/id/1033/600/400" 
+                         alt="Heritage Villa" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="text-2xl heading-font">Heritage Villa</h3>
+                            <span class="text-amber-800 font-medium">₹95,000</span>
+                        </div>
+                        <p class="hindi-font text-sm text-stone-500">विरासत विला</p>
+                        <p class="mt-4 text-stone-600 text-sm line-clamp-3">
+                            Private 300 sqm villa with private garden, outdoor shower, and traditional Rajasthani décor.
+                        </p>
+                        <a href="#booking" 
+                           class="mt-8 block text-center py-4 border border-amber-800 hover:bg-amber-800 hover:text-white transition-all text-sm font-medium">
+                            BOOK THIS ROOM
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DINING -->
+    <section id="dining" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <img src="https://picsum.photos/id/106/900/700" 
+                         alt="Dining at NAMAN" 
+                         class="rounded-3xl shadow-2xl">
+                </div>
+                <div class="space-y-12">
+                    <div>
+                        <span class="uppercase text-xs tracking-widest text-amber-800">Signature Restaurants</span>
+                        <h2 class="heading-font text-5xl mt-3">Flavours that tell stories</h2>
+                    </div>
+                    
+                    <div class="space-y-10">
+                        <div class="flex gap-6">
+                            <div class="w-20 h-20 bg-amber-100 rounded-2xl flex-shrink-0"></div>
+                            <div>
+                                <h4 class="text-2xl">Aamra</h4>
+                                <p class="hindi-font text-sm text-amber-700">आम्रा • Modern Indian</p>
+                                <p class="text-stone-600 mt-2">Chef-curated tasting menus celebrating Rajasthan’s forgotten recipes.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="w-20 h-20 bg-amber-100 rounded-2xl flex-shrink-0"></div>
+                            <div>
+                                <h4 class="text-2xl">Jal</h4>
+                                <p class="hindi-font text-sm text-amber-700">जल • Poolside Mediterranean</p>
+                                <p class="text-stone-600 mt-2">Fresh seafood and light bites under the stars.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="w-20 h-20 bg-amber-100 rounded-2xl flex-shrink-0"></div>
+                            <div>
+                                <h4 class="text-2xl">Chai &amp; Chaat</h4>
+                                <p class="hindi-font text-sm text-amber-700">चाय &amp; चाट • All-day café</p>
+                                <p class="text-stone-600 mt-2">Authentic street food reimagined with elegance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCES -->
+    <section id="experiences" class="py-24 bg-stone-50">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <span class="text-xs tracking-widest bg-white px-6 py-3 rounded-full border">WELLNESS &amp; EXPERIENCES</span>
+            <h2 class="heading-font text-5xl mt-6 mb-12">Moments that linger</h2>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white p-8 rounded-3xl">
+                    <div class="h-12 w-12 mx-auto bg-amber-100 rounded-2xl mb-6"></div>
+                    <h4 class="font-semibold text-xl">Sunrise Yoga</h4>
+                    <p class="hindi-font text-sm text-stone-500 mt-1">सूर्योदय योग</p>
+                    <p class="text-xs text-stone-500 mt-6">Daily 6 AM sessions on the rooftop pavilion</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl">
+                    <div class="h-12 w-12 mx-auto bg-amber-100 rounded-2xl mb-6"></div>
+                    <h4 class="font-semibold text-xl">Ayurvedic Spa</h4>
+                    <p class="hindi-font text-sm text-stone-500 mt-1">आयुर्वेदिक स्पा</p>
+                    <p class="text-xs text-stone-500 mt-6">Ancient therapies using herbs from our garden</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl">
+                    <div class="h-12 w-12 mx-auto bg-amber-100 rounded-2xl mb-6"></div>
+                    <h4 class="font-semibold text-xl">Desert Safari</h4>
+                    <p class="hindi-font text-sm text-stone-500 mt-1">रेगिस्तान सफारी</p>
+                    <p class="text-xs text-stone-500 mt-6">Private camel ride &amp; starlit dinner</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl">
+                    <div class="h-12 w-12 mx-auto bg-amber-100 rounded-2xl mb-6"></div>
+                    <h4 class="font-semibold text-xl">Cooking Atelier</h4>
+                    <p class="hindi-font text-sm text-stone-500 mt-1">रसोई कार्यशाला</p>
+                    <p class="text-xs text-stone-500 mt-6">Learn to cook royal Rajasthani thalis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="heading-font text-5xl">Glimpses of NAMAN</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://picsum.photos/id/201/600/600" class="aspect-square object-cover rounded-3xl hover:scale-105 transition-all" alt="">
+                <img src="https://picsum.photos/id/251/600/600" class="aspect-square object-cover rounded-3xl hover:scale-105 transition-all" alt="">
+                <img src="https://picsum.photos/id/29/600/600" class="aspect-square object-cover rounded-3xl hover:scale-105 transition-all" alt="">
+                <img src="https://picsum.photos/id/318/600/600" class="aspect-square object-cover rounded-3xl hover:scale-105 transition-all" alt="">
+                <img src="https://picsum.photos/id/160/600/600" class="aspect-square object-cover rounded-3xl hover:scale-105 transition-all" alt="">
+                <img src="https://picsum.photos/id/201/600/600" class="aspect-square object-cover rounded-3xl hover:scale-105 transition-all" alt="">
+                <img src="https://picsum.photos/id/1015/600/600" class="aspect-square object-cover rounded-3xl hover:scale-105 transition-all" alt="">
+                <img src="https://picsum.photos/id/133/600/600" class="aspect-square object-cover rounded-3xl hover:scale-105 transition-all" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-24 bg-amber-50">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="italic text-3xl leading-tight text-stone-700">
+                “NAMAN didn’t just give us a room — it gave us memories we will cherish forever. The staff felt like family.”
+            </div>
+            <div class="mt-10 flex items-center justify-center gap-x-4">
+                <div class="w-10 h-px bg-amber-800"></div>
+                <div>
+                    <p class="font-medium">Priya &amp; Arjun Sharma</p>
+                    <p class="text-xs text-stone-500">Mumbai • March 2025</p>
+                </div>
+                <div class="w-10 h-px bg-amber-800"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING CTA -->
+    <section id="booking" class="py-20 bg-stone-900 text-white">
+        <div class="max-w-2xl mx-auto px-6 text-center">
+            <h2 class="heading-font text-5xl mb-4">Begin your journey</h2>
+            <p class="text-stone-400">Select your dates and let us take care of the rest</p>
+            
+            <form id="booking-form" class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                    <label class="block text-xs tracking-widest text-stone-400 mb-2">CHECK-IN</label>
+                    <input type="date" class="w-full bg-transparent border border-stone-700 rounded-2xl py-5 px-6 text-white focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs tracking-widest text-stone-400 mb-2">CHECK-OUT</label>
+                    <input type="date" class="w-full bg-transparent border border-stone-700 rounded-2xl py-5 px-6 text-white focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs tracking-widest text-stone-400 mb-2">GUESTS</label>
+                    <select class="w-full bg-transparent border border-stone-700 rounded-2xl py-5 px-6 text-white focus:outline-none">
+                        <option>2 Adults</option>
+                        <option>2 Adults + 1 Child</option>
+                        <option>4 Adults</option>
+                    </select>
+                </div>
+                <button type="submit"
+                        class="md:col-span-3 mt-4 py-6 bg-amber-800 hover:bg-white hover:text-stone-900 transition-all text-lg font-medium tracking-wider">
+                    CHECK AVAILABILITY
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="heading-font text-5xl">Visit us</h2>
+                <div class="mt-10 space-y-8 text-stone-600">
+                    <div>
+                        <p class="font-medium text-stone-900">NAMAN Luxury Retreat</p>
+                        <p class="text-sm">Khempur Village, Near Udaipur • Rajasthan, India</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8 text-sm">
+                        <div>
+                            <p class="font-medium">+91 98765 43210</p>
+                            <p class="font-medium">reservations@naman.in</p>
+                        </div>
+                        <div>
+                            <p class="font-medium">24-hour concierge</p>
+                            <p class="text-stone-500">Airport transfer available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Fake map -->
+            <div class="bg-stone-100 aspect-video rounded-3xl flex items-center justify-center overflow-hidden">
+                <iframe width="100%" height="100%" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3628.123456789!2d73.7123456789!3d24.5678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c7f0a12345678%3A0x1234567890abcdef!2sUdaipur%2C+Rajasthan!5e0!3m2!1sen!2sin!4v1700000000000" 
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        class="grayscale">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-stone-900 text-stone-400 py-16">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+            <div>
+                <div class="flex items-center gap-x-3 text-white">
+                    <div class="w-7 h-7 bg-amber-800 rounded-full flex items-center justify-center text-xl">N</div>
+                    <span class="heading-font text-3xl">NAMAN</span>
+                </div>
+                <p class="mt-6 text-xs leading-loose hindi-font">
+                    नमन<br>
+                    A home away from home
+                </p>
+            </div>
+            <div class="text-sm">
+                <p class="font-medium text-white mb-4">QUICK LINKS</p>
+                <div class="space-y-3">
+                    <a href="#" class="block hover:text-white">Rooms</a>
+                    <a href="#" class="block hover:text-white">Dining</a>
+                    <a href="#" class="block hover:text-white">Wellness</a>
+                    <a href="#" class="block hover:text-white">Weddings</a>
+                </div>
+            </div>
+            <div class="text-sm">
+                <p class="font-medium text-white mb-4">EXPLORE</p>
+                <div class="space-y-3">
+                    <a href="#" class="block hover:text-white">The Story of NAMAN</a>
+                    <a href="#" class="block hover:text-white">Sustainability</a>
+                    <a href="#" class="block hover:text-white">Journal</a>
+                    <a href="#" class="block hover:text-white">Careers</a>
+                </div>
+            </div>
+            <div>
+                <p class="text-xs">© 2026 NAMAN Luxury Retreat. All rights reserved.</p>
+                <div class="mt-8 flex gap-4 text-2xl">
+                    <span class="cursor-pointer hover:text-amber-300">𝕏</span>
+                    <span class="cursor-pointer hover:text-amber-300">📸</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script already loaded via CDN
+        function initializeTailwind() {
+            // Nothing extra needed
+        }
+
+        // Mobile menu
+        const mobileBtn = document.getElementById('mobile-menu-btn')
+        const mobileMenu = document.getElementById('mobile-menu')
+        
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden')
+            mobileBtn.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕'
+        })
+
+        // Progress bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+            const scrolled = (winScroll / height) * 100
+            document.getElementById("progress-bar").style.width = scrolled + "%"
+        })
+
+        // Booking form demo
+        const bookingForm = document.getElementById('booking-form')
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault()
+            alert('Thank you! Your reservation request has been received. Our team will contact you shortly. 🌿')
+        })
+
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return
+                e.preventDefault()
+                const target = document.querySelector(this.getAttribute('href'))
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    })
+                }
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden')
+                    mobileBtn.textContent = '☰'
+                }
+            })
+        })
+
+        // Keyboard escape for mobile menu
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden')
+                mobileBtn.textContent = '☰'
+            }
+        })
+
+        // Initialize
+        window.onload = initializeTailwind
+    </script>
+</body>
+</html>
