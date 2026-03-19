@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>NAMAN | Luxury Indian Sanctuary</title>
+=======
+    <title>NAMAN | नमन • राजस्थान का शाश्वत आश्रय</title>
+>>>>>>> 27f08b918474b19260c09e7e4aabbc0dbcfe6c63
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
+<<<<<<< HEAD
         :root {
             --sand: #f8f2e8;
             --sand-deep: #ead7bd;
@@ -27,9 +32,22 @@
             background-image: 
                 linear-gradient(180deg, rgba(26, 22, 20, 0.6) 0%, rgba(26, 22, 20, 0.2) 50%, rgba(26, 22, 20, 0.8) 100%),
                 url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=2200&h=1400&fit=crop');
+=======
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@400;500;600&amp;family=Noto+Serif+Devanagari:wght@400;700&amp;display=swap');
+        
+        :root { --gold: #d4af77; }
+        
+        .tail-container { font-family: 'Inter', system-ui, sans-serif; }
+        .heading-font { font-family: 'Playfair Display', serif; }
+        .hindi-font { font-family: 'Noto Serif Devanagari', serif; }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=2000&amp;h=1200&amp;fit=crop');
+>>>>>>> 27f08b918474b19260c09e7e4aabbc0dbcfe6c63
             background-size: cover;
             background-position: center 60%;
         }
+<<<<<<< HEAD
 
         .section-title { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; color: var(--ink); }
         .chip {
@@ -38,11 +56,16 @@
         }
 
         .nav-link { position: relative; transition: color 0.3s ease; letter-spacing: 0.1em; font-size: 0.85rem; }
+=======
+        
+        .nav-link { position: relative; transition: all 0.3s ease; }
+>>>>>>> 27f08b918474b19260c09e7e4aabbc0dbcfe6c63
         .nav-link:after {
             content: ''; position: absolute; width: 0; height: 1px; bottom: -4px; left: 0;
             background-color: var(--terracotta); transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .nav-link:hover:after { width: 100%; }
+<<<<<<< HEAD
 
         .card-elegant { background: var(--panel); border: 1px solid var(--line); transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
         .card-elegant:hover { transform: translateY(-8px); box-shadow: 0 25px 40px -15px rgba(184, 96, 60, 0.12); }
@@ -64,12 +87,26 @@
         
         .border-fancy { border: 1px solid var(--line); position: relative; }
         .border-fancy::before { content: ""; position: absolute; inset: 4px; border: 1px solid rgba(120, 88, 53, 0.08); pointer-events: none; }
+=======
+        
+        .room-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .room-card:hover { transform: translateY(-12px); box-shadow: 0 25px 50px -12px rgb(212 175 119 / 0.25); }
+        
+        .scroll-progress {
+            position: fixed;
+            top: 0; left: 0;
+            height: 2px;
+            background: linear-gradient(to right, #d4af77, #b8860b);
+            z-index: 50;
+        }
+>>>>>>> 27f08b918474b19260c09e7e4aabbc0dbcfe6c63
     </style>
 </head>
 <body class="overflow-x-hidden antialiased">
     <div id="progress-bar" class="scroll-progress w-0"></div>
 
     <!-- NAVBAR -->
+<<<<<<< HEAD
     <nav class="fixed top-0 left-0 right-0 z-50 bg-[#f8f2e8]/90 backdrop-blur-md border-b" style="border-color: var(--line);">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <div class="flex items-center gap-x-4">
@@ -106,11 +143,50 @@
                 <a href="#dining" class="text-sm tracking-widest text-[var(--ink)]">DINING</a>
                 <a href="#wellness" class="text-sm tracking-widest text-[var(--ink)]">WELLNESS</a>
                 <a href="#booking" class="mt-4 px-6 py-4 text-xs tracking-widest text-white btn-primary mx-auto w-full max-w-xs">RESERVE YOUR STAY</a>
+=======
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-100">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-9 h-9 bg-amber-800 rounded-full flex items-center justify-center text-white text-2xl font-bold heading-font">N</div>
+                <div>
+                    <h1 class="text-3xl tracking-tighter heading-font text-stone-900">NAMAN</h1>
+                    <p class="text-[10px] tracking-[3px] text-amber-800 hindi-font -mt-1">नमन</p>
+                </div>
+            </div>
+
+            <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+                <a href="#home" class="nav-link text-stone-700 hover:text-amber-800">HOME</a>
+                <a href="#rooms" class="nav-link text-stone-700 hover:text-amber-800">ROOMS</a>
+                <a href="#dining" class="nav-link text-stone-700 hover:text-amber-800">DINING</a>
+                <a href="#experiences" class="nav-link text-stone-700 hover:text-amber-800">EXPERIENCES</a>
+                <a href="#gallery" class="nav-link text-stone-700 hover:text-amber-800">GALLERY</a>
+                <a href="#about" class="nav-link text-stone-700 hover:text-amber-800">ABOUT</a>
+                <a href="#contact" class="nav-link text-stone-700 hover:text-amber-800">CONTACT</a>
+            </div>
+
+            <a href="#booking" class="px-8 py-3 bg-amber-800 hover:bg-amber-900 text-white text-sm font-medium tracking-wider transition-all rounded-full">BOOK NOW</a>
+
+            <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-2xl">☰</button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-8 flex flex-col gap-y-6 text-lg font-medium">
+                <a href="#home" class="mobile-link">HOME • होम</a>
+                <a href="#rooms" class="mobile-link">ROOMS • कमरे</a>
+                <a href="#dining" class="mobile-link">DINING • भोजन</a>
+                <a href="#experiences" class="mobile-link">EXPERIENCES • अनुभव</a>
+                <a href="#gallery" class="mobile-link">GALLERY • गैलरी</a>
+                <a href="#about" class="mobile-link">ABOUT • हमारे बारे में</a>
+                <a href="#contact" class="mobile-link">CONTACT • संपर्क</a>
+                <a href="#booking" class="mt-6 px-8 py-4 bg-amber-800 text-white text-center rounded-full">अभी बुक करें</a>
+>>>>>>> 27f08b918474b19260c09e7e4aabbc0dbcfe6c63
             </div>
         </div>
     </nav>
 
     <!-- HERO -->
+<<<<<<< HEAD
     <section id="home" class="hero-bg h-screen flex items-center justify-center relative overflow-hidden">
         <div class="text-center text-white max-w-5xl px-6 z-10 pt-20">
             <p class="text-amber-100/80 tracking-[0.4em] text-xs md:text-sm font-medium mb-6 uppercase">A modern heritage retreat</p>
@@ -157,10 +233,61 @@
                     <div>
                         <div class="text-4xl heading-font text-[var(--terracotta)] mb-1">12</div>
                         <div class="text-xs tracking-[0.15em] text-[var(--muted)] uppercase">Acres of Oasis</div>
+=======
+    <section id="home" class="hero-bg h-screen flex items-center justify-center relative">
+        <div class="text-center text-white max-w-4xl px-6 z-10">
+            <p class="text-amber-300 tracking-[6px] text-sm font-medium mb-2 hindi-font">राजस्थान • भारत</p>
+            <h1 class="text-[92px] md:text-[120px] leading-none heading-font tracking-tighter mb-2">NAMAN</h1>
+            <h2 class="text-4xl hindi-font tracking-wider text-amber-200">नमन</h2>
+            <p class="mt-8 max-w-md mx-auto text-xl text-stone-100 font-light hindi-font">
+                जहाँ प्राचीन अनुग्रह आधुनिक शांति से मिलता है
+            </p>
+            <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#rooms" class="px-10 py-5 bg-white text-stone-900 hover:bg-amber-100 transition-all text-sm font-semibold tracking-wider">कमरे देखें</a>
+                <a href="#booking" class="px-10 py-5 border border-white hover:bg-white/10 transition-all text-sm font-semibold tracking-wider">अपना प्रवास आरक्षित करें</a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-y-2 text-white/70 text-xs tracking-widest">
+            <div class="w-px h-12 bg-gradient-to-b from-transparent via-white/60 to-transparent"></div>
+            SCROLL • स्क्रॉल करें
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-amber-800 text-sm tracking-widest font-medium">हमारी कहानी • OUR STORY</span>
+                <h2 class="heading-font text-5xl leading-none mt-3 mb-8">
+                    नमन — राजस्थान की शाश्वत <br>भारतीय भव्यता का अभयारण्य
+                </h2>
+                <div class="prose text-stone-600 text-lg">
+                    <p class="mb-6">
+                        राजस्थान के हृदय में स्थित, नमन केवल एक होटल नहीं — यह भारत की समृद्ध विरासत को जीवंत श्रद्धांजलि है।
+                        हर विवरण — चाहे वह हाथ से तराशा हुआ सैंडस्टोन हो या सुगंधित गेंदे के फूल — सदियों पुरानी परंपरा को समकालीन विलासिता के साथ जोड़ता है।
+                    </p>
+                    <p>
+                        चाहे आप अरावली पहाड़ियों को देखते हुए इन्फिनिटी पूल के किनारे एकांत चाहें या सूर्योदय के समय निजी योग सत्र — नमन आपको धीरे चलने और स्वयं से पुनः जुड़ने का निमंत्रण देता है।
+                    </p>
+                </div>
+                <div class="mt-10 flex items-center gap-x-8">
+                    <div class="text-center">
+                        <div class="text-4xl font-semibold text-amber-800">४२</div>
+                        <div class="text-xs tracking-widest text-stone-500">विलासिता कमरे</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-semibold text-amber-800">३</div>
+                        <div class="text-xs tracking-widest text-stone-500">हस्ताक्षर रेस्तरां</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-semibold text-amber-800">१८</div>
+                        <div class="text-xs tracking-widest text-stone-500">एकड़ शांति</div>
+>>>>>>> 27f08b918474b19260c09e7e4aabbc0dbcfe6c63
                     </div>
                 </div>
             </div>
             
+<<<<<<< HEAD
             <div class="md:col-span-7 relative reveal">
                 <div class="absolute inset-0 bg-[var(--terracotta)] translate-x-4 translate-y-4 -z-10 img-elegant"></div>
                 <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a26?w=1200&h=900&fit=crop" 
@@ -170,11 +297,23 @@
                 <div class="absolute -bottom-8 -left-8 bg-white p-8 img-elegant max-w-[280px]">
                     <p class="heading-font text-2xl italic text-[var(--ink)] mb-4">"Elegance is the only beauty that never fades."</p>
                     <span class="hindi-font text-3xl text-[var(--terracotta-dark)] opacity-40">सुकून</span>
+=======
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a26?w=800&amp;h=900&amp;fit=crop" 
+                     alt="नमन का आँगन" 
+                     class="w-full rounded-2xl shadow-2xl">
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-[260px]">
+                    <p class="hindi-font text-2xl italic text-stone-700">
+                        “यहाँ समय रुक जाता है”<br>
+                        <span class="block text-xs text-amber-800 mt-3 not-italic font-medium">— Here time stands still</span>
+                    </p>
+>>>>>>> 27f08b918474b19260c09e7e4aabbc0dbcfe6c63
                 </div>
             </div>
         </div>
     </section>
 
+<<<<<<< HEAD
     <!-- SUITES -->
     <section id="suites" class="py-32 bg-[var(--sand)] relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
@@ -220,6 +359,65 @@
                 <div class="card-elegant group reveal" style="transition-delay: 200ms;">
                     <div class="relative overflow-hidden aspect-[4/3] border-b border-[var(--line)]">
                         <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&h=600&fit=crop" alt="Heritage Villa" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+=======
+    <!-- ROOMS -->
+    <section id="rooms" class="py-24 bg-stone-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="px-5 py-2 bg-amber-100 text-amber-800 text-xs font-medium rounded-full">ROOMS &amp; SUITES • कमरे और सूट</span>
+                <h2 class="heading-font text-5xl mt-4">अपना आश्रय चुनें • Choose your sanctuary</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Room 1 -->
+                <div class="room-card bg-white rounded-3xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1618776188226-6a0b0d4d0e2a?w=600&amp;h=400&amp;fit=crop" 
+                         alt="डिलक्स कमरा" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="text-2xl heading-font">Deluxe Room</h3>
+                            <span class="text-amber-800 font-medium">₹२८,०००</span>
+                        </div>
+                        <p class="hindi-font text-sm text-stone-500">विलासिता कक्ष</p>
+                        <p class="mt-4 text-stone-600 text-sm line-clamp-3">
+                            ४५ वर्ग मीटर का विशाल कमरा, निजी बालकनी, राजस्थानी उद्यान दृश्य, किंग बेड और संगमरमर का स्नानघर।
+                        </p>
+                        <a href="#booking" class="mt-8 block text-center py-4 border border-amber-800 hover:bg-amber-800 hover:text-white transition-all text-sm font-medium">इस कमरे को बुक करें</a>
+                    </div>
+                </div>
+
+                <!-- Room 2 -->
+                <div class="room-card bg-white rounded-3xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&amp;h=400&amp;fit=crop" 
+                         alt="सिग्नेचर सूट" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="text-2xl heading-font">Signature Suite</h3>
+                            <span class="text-amber-800 font-medium">₹४८,०००</span>
+                        </div>
+                        <p class="hindi-font text-sm text-stone-500">हस्ताक्षर सूट</p>
+                        <p class="mt-4 text-stone-600 text-sm line-clamp-3">
+                            ८५ वर्ग मीटर की शुद्ध विलासिता — अलग लिविंग एरिया, निजी टेरेस और प्लंज पूल।
+                        </p>
+                        <a href="#booking" class="mt-8 block text-center py-4 border border-amber-800 hover:bg-amber-800 hover:text-white transition-all text-sm font-medium">इस सूट को बुक करें</a>
+                    </div>
+                </div>
+
+                <!-- Room 3 -->
+                <div class="room-card bg-white rounded-3xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=600&amp;h=400&amp;fit=crop" 
+                         alt="हेरिटेज विला" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="text-2xl heading-font">Heritage Villa</h3>
+                            <span class="text-amber-800 font-medium">₹९५,०००</span>
+                        </div>
+                        <p class="hindi-font text-sm text-stone-500">विरासत विला</p>
+                        <p class="mt-4 text-stone-600 text-sm line-clamp-3">
+                            निजी ३०० वर्ग मीटर विला, निजी उद्यान, आउटडोर शावर और पारंपरिक राजस्थानी सजावट।
+                        </p>
+                        <a href="#booking" class="mt-8 block text-center py-4 border border-amber-800 hover:bg-amber-800 hover:text-white transition-all text-sm font-medium">इस विला को बुक करें</a>
+>>>>>>> 27f08b918474b19260c09e7e4aabbc0dbcfe6c63
                     </div>
                     <div class="p-8 border-fancy">
                         <div class="flex justify-between items-baseline mb-3">
@@ -261,11 +459,24 @@
     <section id="dining" class="py-32 bg-[#fffdf8] relative">
         <div class="hindi-bg-text top-10 right-0 heading-font" style="transform: translateX(20%);">स्वाद</div>
         <div class="max-w-7xl mx-auto px-6">
+<<<<<<< HEAD
             <div class="grid lg:grid-cols-12 gap-16 items-center">
                 <div class="lg:col-span-5 reveal order-2 lg:order-1">
                     <span class="chip px-4 py-1.5 rounded-sm inline-block mb-6">Culinary Arts</span>
                     <h2 class="heading-font section-title mb-8">A journey of sensory delights.</h2>
                     <p class="text-[var(--muted)] text-lg font-light leading-relaxed mb-10">Our culinary philosophy honors the forgotten recipes of royal kitchens while embracing contemporary gastronomy. We use organic produce grown in our very own kitchen gardens.</p>
+=======
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34b4?w=900&amp;h=700&amp;fit=crop" 
+                         alt="नमन में भोजन" class="rounded-3xl shadow-2xl">
+                </div>
+                <div class="space-y-12">
+                    <div>
+                        <span class="uppercase text-xs tracking-widest text-amber-800">हस्ताक्षर रेस्तरां • Signature Restaurants</span>
+                        <h2 class="heading-font text-5xl mt-3">स्वाद जो कहानियाँ सुनाते हैं • Flavours that tell stories</h2>
+                    </div>
+>>>>>>> 27f08b918474b19260c09e7e4aabbc0dbcfe6c63
                     
                     <div class="space-y-10 border-t border-[var(--line)] pt-10">
                         <div class="flex gap-6 items-start">
@@ -273,6 +484,7 @@
                                 <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=200&h=200&fit=crop" alt="Aamra Fine Dining" class="w-full h-full object-cover">
                             </div>
                             <div>
+<<<<<<< HEAD
                                 <h4 class="text-xl heading-font mb-1">Aamra</h4>
                                 <p class="text-xs tracking-[0.15em] text-[var(--terracotta)] uppercase mb-2">Modern Indian Fine Dining</p>
                                 <p class="text-[var(--muted)] text-sm font-light">Seven-course chef’s tasting menus celebrating regional heritage.</p>
@@ -281,11 +493,30 @@
                         <div class="flex gap-6 items-start">
                             <div class="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 card-elegant">
                                 <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=200&h=200&fit=crop" alt="Jal Poolside" class="w-full h-full object-cover">
+=======
+                                <h4 class="text-2xl">Aamra • आम्रा</h4>
+                                <p class="hindi-font text-sm text-amber-700">आधुनिक भारतीय</p>
+                                <p class="text-stone-600 mt-2">राजस्थान की भूली हुई रेसिपी का स्वाद चखें — शेफ क्यूरेटेड टेस्टिंग मेन्यू।</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="w-20 h-20 bg-amber-100 rounded-2xl flex-shrink-0"></div>
+                            <div>
+                                <h4 class="text-2xl">Jal • जल</h4>
+                                <p class="hindi-font text-sm text-amber-700">पूलसाइड भूमध्यसागरीय</p>
+                                <p class="text-stone-600 mt-2">तारे के नीचे ताज़ा समुद्री भोजन और हल्के स्वाद।</p>
+>>>>>>> 27f08b918474b19260c09e7e4aabbc0dbcfe6c63
                             </div>
                             <div>
+<<<<<<< HEAD
                                 <h4 class="text-xl heading-font mb-1">Jal</h4>
                                 <p class="text-xs tracking-[0.15em] text-[var(--terracotta)] uppercase mb-2">Mediterranean Al-Fresco</p>
                                 <p class="text-[var(--muted)] text-sm font-light">Wood-fired oven specialties and fresh seafood by the infinity pool.</p>
+=======
+                                <h4 class="text-2xl">Chai &amp; Chaat • चाय &amp; चाट</h4>
+                                <p class="hindi-font text-sm text-amber-700">अल-दिन कैफ़े</p>
+                                <p class="text-stone-600 mt-2">राजसी अंदाज़ में पुनः कल्पित प्रामाणिक स्ट्रीट फूड।</p>
+>>>>>>> 27f08b918474b19260c09e7e4aabbc0dbcfe6c63
                             </div>
                         </div>
                     </div>
@@ -300,6 +531,7 @@
     <!-- WELLNESS -->
     <section id="wellness" class="py-32 bg-[var(--sand)] relative">
         <div class="max-w-7xl mx-auto px-6 text-center">
+<<<<<<< HEAD
             <span class="chip px-4 py-1.5 rounded-sm inline-block mb-6">Wellbeing</span>
             <div class="flex justify-center flex-col items-center mb-16 reveal">
                 <p class="hindi-font text-3xl text-[var(--terracotta)] mb-2">आरोग्य</p>
@@ -322,22 +554,83 @@
                     <h4 class="text-2xl heading-font mb-2">Desert Experiences</h4>
                     <p class="text-[var(--muted)] text-sm font-light mb-4">Private guided safaris, luxury high-tea on the dunes, and stargazing with our resident astronomer.</p>
                 </div>
+=======
+            <span class="text-xs tracking-widest bg-white px-6 py-3 rounded-full border">WELLNESS &amp; EXPERIENCES • स्वास्थ्य और अनुभव</span>
+            <h2 class="heading-font text-5xl mt-6 mb-12">क्षण जो सदा याद रहें • Moments that linger</h2>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white p-8 rounded-3xl">
+                    <div class="h-12 w-12 mx-auto bg-amber-100 rounded-2xl mb-6"></div>
+                    <h4 class="font-semibold text-xl">Sunrise Yoga</h4>
+                    <p class="hindi-font text-sm text-stone-500 mt-1">सूर्योदय योग</p>
+                    <p class="text-xs text-stone-500 mt-6">रूफटॉप पवेलियन पर प्रतिदिन ६ बजे</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl">
+                    <div class="h-12 w-12 mx-auto bg-amber-100 rounded-2xl mb-6"></div>
+                    <h4 class="font-semibold text-xl">Ayurvedic Spa</h4>
+                    <p class="hindi-font text-sm text-stone-500 mt-1">आयुर्वेदिक स्पा</p>
+                    <p class="text-xs text-stone-500 mt-6">हमारे बगीचे की जड़ी-बूटियों से प्राचीन चिकित्सा</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl">
+                    <div class="h-12 w-12 mx-auto bg-amber-100 rounded-2xl mb-6"></div>
+                    <h4 class="font-semibold text-xl">Desert Safari</h4>
+                    <p class="hindi-font text-sm text-stone-500 mt-1">रेगिस्तान सफारी</p>
+                    <p class="text-xs text-stone-500 mt-6">निजी ऊंट सवारी और तारों भरा डिनर</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl">
+                    <div class="h-12 w-12 mx-auto bg-amber-100 rounded-2xl mb-6"></div>
+                    <h4 class="font-semibold text-xl">Cooking Atelier</h4>
+                    <p class="hindi-font text-sm text-stone-500 mt-1">रसोई कार्यशाला</p>
+                    <p class="text-xs text-stone-500 mt-6">राजसी राजस्थानी थाली बनाना सीखें</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="heading-font text-5xl">नमन की झलकियाँ • Glimpses of NAMAN</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&amp;h=600&amp;fit=crop" class="aspect-square object-cover rounded-3xl hover:scale-105 transition-all" alt="इन्फिनिटी पूल">
+                <img src="https://images.unsplash.com/photo-1559523195-5f3e4b1f0f6d?w=600&amp;h=600&amp;fit=crop" class="aspect-square object-cover rounded-3xl hover:scale-105 transition-all" alt="आयुर्वेदिक स्पा">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&amp;h=600&amp;fit=crop" class="aspect-square object-cover rounded-3xl hover:scale-105 transition-all" alt="रेगिस्तान सफारी">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&amp;h=600&amp;fit=crop" class="aspect-square object-cover rounded-3xl hover:scale-105 transition-all" alt="सूर्योदय योग">
+                <img src="https://images.unsplash.com/photo-1544984580-1e2f4c1e1c0a?w=600&amp;h=600&amp;fit=crop" class="aspect-square object-cover rounded-3xl hover:scale-105 transition-all" alt="आँगन">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&amp;h=600&amp;fit=crop" class="aspect-square object-cover rounded-3xl hover:scale-105 transition-all" alt="बाहरी दृश्य">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a26?w=600&amp;h=600&amp;fit=crop" class="aspect-square object-cover rounded-3xl hover:scale-105 transition-all" alt="विला उद्यान">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34b4?w=600&amp;h=600&amp;fit=crop" class="aspect-square object-cover rounded-3xl hover:scale-105 transition-all" alt="डाइनिंग">
+>>>>>>> 27f08b918474b19260c09e7e4aabbc0dbcfe6c63
             </div>
         </div>
     </section>
 
     <!-- TESTIMONIALS -->
+<<<<<<< HEAD
     <section class="py-24 bg-[#fffdf8] border-y border-[var(--line)]">
         <div class="max-w-4xl mx-auto px-6 text-center reveal">
             <svg class="w-10 h-10 mx-auto text-[var(--terracotta)] mb-8 opacity-50" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
             <div class="heading-font text-3xl md:text-5xl leading-tight text-[var(--ink)] mb-10">
                 “Naman didn’t just offer us a room — it immersed us in a lifestyle of forgotten luxury. An unforgettable Indian sanctuary.”
+=======
+    <section class="py-24 bg-amber-50">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="italic text-3xl leading-tight text-stone-700 hindi-font">
+                “नमन ने हमें केवल कमरा नहीं दिया — उसने वह यादें दीं जो हम कभी नहीं भूलेंगे। स्टाफ परिवार जैसा लगा।”
+>>>>>>> 27f08b918474b19260c09e7e4aabbc0dbcfe6c63
             </div>
             <div class="flex items-center justify-center gap-x-6">
                 <div class="w-12 h-[1px] bg-[var(--terracotta)]"></div>
                 <div>
+<<<<<<< HEAD
                     <p class="font-medium text-sm tracking-widest uppercase">Priya & Arjun Sharma</p>
                     <p class="text-xs text-[var(--muted)] mt-1">London, UK</p>
+=======
+                    <p class="font-medium">प्रिया और अर्जुन शर्मा</p>
+                    <p class="text-xs text-stone-500">मुंबई • मार्च २०२५</p>
+>>>>>>> 27f08b918474b19260c09e7e4aabbc0dbcfe6c63
                 </div>
                 <div class="w-12 h-[1px] bg-[var(--terracotta)]"></div>
             </div>
@@ -345,6 +638,7 @@
     </section>
 
     <!-- BOOKING CTA -->
+<<<<<<< HEAD
     <section id="booking" class="py-32 bg-[#1a1614] text-white relative overflow-hidden">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/5 rounded-full pointer-events-none"></div>
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/5 rounded-full pointer-events-none"></div>
@@ -352,9 +646,16 @@
         <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
             <h2 class="heading-font text-5xl md:text-6xl text-white mb-4">Begin Your Journey</h2>
             <p class="text-stone-400 font-light mb-16">Reserve your date, and allow us to perfect the details.</p>
+=======
+    <section id="booking" class="py-20 bg-stone-900 text-white">
+        <div class="max-w-2xl mx-auto px-6 text-center">
+            <h2 class="heading-font text-5xl mb-4">अपनी यात्रा शुरू करें • Begin your journey</h2>
+            <p class="text-stone-400">तारीख चुनें, बाकी हम संभाल लेंगे</p>
+>>>>>>> 27f08b918474b19260c09e7e4aabbc0dbcfe6c63
             
             <form class="bg-[#241e1c] p-8 md:p-12 img-elegant border border-white/10 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
                 <div>
+<<<<<<< HEAD
                     <label class="block text-[10px] tracking-[0.2em] text-stone-400 mb-2 uppercase">Arrival</label>
                     <input type="date" class="w-full bg-transparent border-b border-white/20 pb-3 text-white focus:outline-none focus:border-[var(--terracotta)] transition-colors text-sm font-light">
                 </div>
@@ -372,10 +673,29 @@
                     </select>
                 </div>
                 <button type="submit" class="md:col-span-3 mt-6 py-5 bg-[var(--terracotta)] hover:bg-[var(--terracotta-dark)] text-white text-xs font-semibold tracking-[0.2em] uppercase transition-all shadow-xl">Check Availability</button>
+=======
+                    <label class="block text-xs tracking-widest text-stone-400 mb-2">चेक-इन • CHECK-IN</label>
+                    <input type="date" class="w-full bg-transparent border border-stone-700 rounded-2xl py-5 px-6 text-white focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs tracking-widest text-stone-400 mb-2">चेक-आउट • CHECK-OUT</label>
+                    <input type="date" class="w-full bg-transparent border border-stone-700 rounded-2xl py-5 px-6 text-white focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs tracking-widest text-stone-400 mb-2">मेहमान • GUESTS</label>
+                    <select class="w-full bg-transparent border border-stone-700 rounded-2xl py-5 px-6 text-white focus:outline-none">
+                        <option>२ वयस्क</option>
+                        <option>२ वयस्क + १ बच्चा</option>
+                        <option>४ वयस्क</option>
+                    </select>
+                </div>
+                <button type="submit" class="md:col-span-3 mt-4 py-6 bg-amber-800 hover:bg-white hover:text-stone-900 transition-all text-lg font-medium tracking-wider">उपलब्धता जाँचें</button>
+>>>>>>> 27f08b918474b19260c09e7e4aabbc0dbcfe6c63
             </form>
         </div>
     </section>
 
+<<<<<<< HEAD
     <!-- FOOTER -->
     <footer class="bg-[#fffdf8] pt-24 pb-12 border-t border-[var(--line)]">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 font-light">
@@ -395,10 +715,90 @@
         </div>
         <div class="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-[var(--line)] flex flex-col md:flex-row justify-between items-center text-[11px] tracking-widest text-[var(--muted)] uppercase">
             <p>© 2026 Naman Retreat. All Rights Reserved.</p>
+=======
+    <!-- LOCATION -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="heading-font text-5xl">हमारे पास आएँ • Visit us</h2>
+                <div class="mt-10 space-y-8 text-stone-600">
+                    <div>
+                        <p class="font-medium text-stone-900">नमन लग्ज़री रिट्रीट</p>
+                        <p class="text-sm">खेमपुर गाँव, उदयपुर के पास • राजस्थान, भारत</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8 text-sm">
+                        <div>
+                            <p class="font-medium">+९१ ९८७६५ ४३२१०</p>
+                            <p class="font-medium">reservations@naman.in</p>
+                        </div>
+                        <div>
+                            <p class="font-medium">२४ घंटे कंसर्ज</p>
+                            <p class="text-stone-500">एयरपोर्ट ट्रांसफर उपलब्ध</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-stone-100 aspect-video rounded-3xl overflow-hidden">
+                <iframe width="100%" height="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3628.0!2d73.7!3d24.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967f0a123456789%3A0xabcdef1234567890!2sUdaipur%2C+Rajasthan!5e0!3m2!1sen!2sin!4v1700000000000" allowfullscreen="" loading="lazy" class="grayscale"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-stone-900 text-stone-400 py-16">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+            <div>
+                <div class="flex items-center gap-x-3 text-white">
+                    <div class="w-7 h-7 bg-amber-800 rounded-full flex items-center justify-center text-xl">N</div>
+                    <span class="heading-font text-3xl">NAMAN</span>
+                </div>
+                <p class="mt-6 text-xs leading-loose hindi-font">
+                    नमन<br>
+                    घर से दूर एक घर
+                </p>
+            </div>
+            <div class="text-sm">
+                <p class="font-medium text-white mb-4">त्वरित लिंक</p>
+                <div class="space-y-3">
+                    <a href="#" class="block hover:text-white">कमरे</a>
+                    <a href="#" class="block hover:text-white">भोजन</a>
+                    <a href="#" class="block hover:text-white">स्वास्थ्य</a>
+                    <a href="#" class="block hover:text-white">विवाह</a>
+                </div>
+            </div>
+            <div class="text-sm">
+                <p class="font-medium text-white mb-4">अन्वेषण करें</p>
+                <div class="space-y-3">
+                    <a href="#" class="block hover:text-white">नमन की कहानी</a>
+                    <a href="#" class="block hover:text-white">सस्टेनेबिलिटी</a>
+                    <a href="#" class="block hover:text-white">जर्नल</a>
+                    <a href="#" class="block hover:text-white">करियर</a>
+                </div>
+            </div>
+            <div>
+                <p class="text-xs">© २०२६ NAMAN Luxury Retreat. सभी अधिकार सुरक्षित।</p>
+                <div class="mt-8 flex gap-4 text-2xl">
+                    <span class="cursor-pointer hover:text-amber-300">𝕏</span>
+                    <span class="cursor-pointer hover:text-amber-300">📸</span>
+                </div>
+            </div>
+>>>>>>> 27f08b918474b19260c09e7e4aabbc0dbcfe6c63
         </div>
     </footer>
 
     <script>
+<<<<<<< HEAD
+=======
+        // Mobile menu
+        const mobileBtn = document.getElementById('mobile-menu-btn')
+        const mobileMenu = document.getElementById('mobile-menu')
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden')
+            mobileBtn.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕'
+        })
+
+        // Progress bar
+>>>>>>> 27f08b918474b19260c09e7e4aabbc0dbcfe6c63
         window.addEventListener('scroll', () => {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -406,6 +806,7 @@
             document.getElementById("progress-bar").style.width = scrolled + "%";
         });
 
+<<<<<<< HEAD
         const revealElements = document.querySelectorAll('.reveal');
         const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach((entry) => {
@@ -416,6 +817,35 @@
         }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
 
         revealElements.forEach((element) => revealObserver.observe(element));
+=======
+        // Booking form
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault()
+            alert('धन्यवाद! आपका आरक्षण अनुरोध प्राप्त हो गया है। हमारी टीम जल्द संपर्क करेगी। 🌿')
+        })
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return
+                e.preventDefault()
+                const target = document.querySelector(this.getAttribute('href'))
+                if (target) target.scrollIntoView({ behavior: 'smooth' })
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden')
+                    mobileBtn.textContent = '☰'
+                }
+            })
+        })
+
+        // Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden')
+                mobileBtn.textContent = '☰'
+            }
+        })
+>>>>>>> 27f08b918474b19260c09e7e4aabbc0dbcfe6c63
     </script>
 </body>
 </html>
